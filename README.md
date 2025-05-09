@@ -35,7 +35,24 @@ def preprocess_image(img):
 
 ---
 
-### 🤖 2. YOLOv8 Detection
+### 🗂️ 2. Dataset
+
+You can download the dataset directly from [Kaggle](https://www.kaggle.com/datasets/pkdarabi/bone-fracture-detection-computer-vision-project) using `kagglehub`:
+
+```python
+import kagglehub
+
+# Download the latest version of the dataset
+path = kagglehub.dataset_download("pkdarabi/bone-fracture-detection-computer-vision-project")
+
+print("Path to dataset files:", path)
+```
+
+Make sure you have [Kaggle API credentials](https://www.kaggle.com/docs/api) set up before running the command.
+
+---
+
+### 🤖 3. YOLOv8 Detection
 
 We use **YOLOv8** for object detection on processed images:
 
@@ -48,7 +65,7 @@ We use **YOLOv8** for object detection on processed images:
 
 ---
 
-### 🧠 3. CNN and Other Models
+### 🧠 4. CNN and Other Models
 
 We're also experimenting with:
 
@@ -93,13 +110,17 @@ cd bone-fracture-detection
 pip install -r requirements.txt
 ```
 
-### 3. Preprocess images
+### 3. Download dataset
+
+Follow the instructions above using `kagglehub`.
+
+### 4. Preprocess images
 
 ```python
 from preprocessing.preprocess import preprocess_image
 ```
 
-### 4. Train models
+### 5. Train models
 
 - Use YOLOv8 via Ultralytics ([docs](https://docs.ultralytics.com/))
 - Or run `cnn_model.py` to train the CNN
@@ -117,6 +138,7 @@ from preprocessing.preprocess import preprocess_image
 - Improve model accuracy with more diverse datasets
 - Visualize model attention using Grad-CAM
 - Optimize for mobile deployment (ONNX / TFLite)
+- Train on more X-ray datasets from Kaggle or open medical repositories
 
 ---
 
