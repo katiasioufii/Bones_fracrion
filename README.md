@@ -31,33 +31,38 @@ def preprocess_image(img):
     # Normalize and convert to uint8
     img = img / 255.0
     return (img * 255).astype(np.uint8)
-🤖 2. YOLOv8 Detection
-We use YOLOv8 for object detection on processed images:
+```
 
-Annotated datasets are used to train the model.
+---
 
-Model detects and localizes potential fractures using bounding boxes.
+### 🤖 2. YOLOv8 Detection
 
-Easy to integrate and deploy.
+We use **YOLOv8** for object detection on processed images:
 
-🚧 Training in progress...
-Results and model weights will be added soon.
+- Annotated datasets are used to train the model.
+- Model detects and localizes potential fractures using bounding boxes.
+- Easy to integrate and deploy.
 
-🧠 3. CNN and Other Models
+> 🚧 **Training in progress...**  
+> Results and model weights will be added soon.
+
+---
+
+### 🧠 3. CNN and Other Models
+
 We're also experimenting with:
 
-CNN-based binary classifiers
+- CNN-based binary classifiers
+- Transfer learning (e.g., ResNet, MobileNet)
+- Ensemble models for improved performance
 
-Transfer learning (e.g., ResNet, MobileNet)
+> 📌 **Updates coming soon after evaluation.**
 
-Ensemble models for improved performance
+---
 
-📌 Updates coming soon after evaluation.
+## 📁 Project Structure
 
-📁 Project Structure
-kotlin
-Copy
-Edit
+```
 ├── preprocessing/
 │   └── preprocess.py
 ├── models/
@@ -69,43 +74,54 @@ Edit
 │   └── training_experiments.ipynb
 ├── README.md
 └── requirements.txt
-🚀 Getting Started
-1. Clone the repository
-bash
-Copy
-Edit
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/your-username/bone-fracture-detection.git
 cd bone-fracture-detection
-2. Install dependencies
-nginx
-Copy
-Edit
+```
+
+### 2. Install dependencies
+
+```bash
 pip install -r requirements.txt
-3. Preprocess images
-python
-Copy
-Edit
+```
+
+### 3. Preprocess images
+
+```python
 from preprocessing.preprocess import preprocess_image
-4. Train models
-Use YOLOv8 via Ultralytics (docs)
+```
 
-Or run cnn_model.py to train the CNN
+### 4. Train models
 
-📊 Results
-Results will be documented here after training is complete. Check back soon!
+- Use YOLOv8 via Ultralytics ([docs](https://docs.ultralytics.com/))
+- Or run `cnn_model.py` to train the CNN
 
-🔮 Future Work
-Improve model accuracy with more diverse datasets
+---
 
-Visualize model attention using Grad-CAM
+## 📊 Results
 
-Optimize for mobile deployment (ONNX / TFLite)
+> Results will be documented here after training is complete. Check back soon!
 
-🤝 Contributing
+---
+
+## 🔮 Future Work
+
+- Improve model accuracy with more diverse datasets
+- Visualize model attention using Grad-CAM
+- Optimize for mobile deployment (ONNX / TFLite)
+
+---
+
+## 🤝 Contributing
+
 Contributions are welcome! Please fork the repo and open a pull request. For major changes, open an issue first to discuss what you’d like to change.
 
-vbnet
-Copy
-Edit
-
-Let me know if you want this turned into an actual file and sent back to you.
+---
